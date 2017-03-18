@@ -1,4 +1,6 @@
 *.o
+*.so
+*.lib
 GPATH
 GRTAGS
 GSYMS
