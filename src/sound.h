@@ -2,7 +2,7 @@
 #define H_SOUND
 
 #include "bass.h"
-#include "thread.h"
+#include <thread>
 
 class GameAudio
 {
