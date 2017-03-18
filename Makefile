@@ -6,7 +6,7 @@ OBJECTS := $(patsubst %.cpp, %.o, $(SOURCES))
 BUILDDIR := build/
 DEPS := $(shell find $(SOURCEDIR) -name '*.h')
 CPPFLAGS := -L$(shell sdl2-config --libs) $(shell sdl2-config --cflags) 
-SDLFLAGS = -lGL -lSDL2 -lSDL2main
+SDLFLAGS = -lGL -lSDL2 -lSDL2main -pthread
 CFLAGS := -std=c++11 -Wall -I headers/
 
 default: $(TARGET)
