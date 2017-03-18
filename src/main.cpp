@@ -5,7 +5,7 @@
 int main()
 {
     //Initialize BASS
-    BASS_Init(-1);
+    BASS_Init(-1, 44100, 0, 0, NULL);
 
     //Initialize SDL
     SDL_Init(SDL_INIT_EVERYTHING);
