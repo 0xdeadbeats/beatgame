@@ -2,6 +2,7 @@
 #define H_GAMEWINDOW
 
 #include "SDL2/SDL.h"
+#include "input.h"
 #include <iostream>
 
 class GameWindow
@@ -10,6 +11,7 @@ public:
 	GameWindow(const char* title, int width, int height);
 	~GameWindow();
 
+	void ClearColor();
 	void GameLoop();
 	void Update();
 	void Draw();

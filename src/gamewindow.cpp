@@ -9,14 +9,29 @@ GameWindow::GameWindow(const char* title, int width, int height)
     _surface = SDL_GetWindowSurface(_window);
 }
 
+GameWindow::~GameWindow()
+{
+    SDL_Quit();
+}
+
+void GameWindow::ClearColor()
+{
+    SDL_LockSurface(_surface);
+    SDL_FillRect(_surface, NULL, SDL_MapRGB(_surface->format, 0, 0, 0));
+    SDL_UnlockSurface(_surface);
+}
+
 void GameWindow::Update()
 {
-
+    if (Input::IsKeyDown(SDL_SCANCODE_ESCAPE)) {
+        _running = false;
+    }
 }
 
 void GameWindow::Draw()
 {
-    
+    ClearColor();
+    SDL_UpdateWindowSurface(_window);
 }
 
 void GameWindow::GameLoop()
