@@ -11,7 +11,7 @@ GameAudio::~GameAudio()
 	BASS_StreamFree(_hstream);
 }
 
-void handlePlay()
+void GameAudio::handlePlay()
 {
 	//Play the audio.
 	BASS_ChannelPlay(_hstream, false);

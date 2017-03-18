@@ -3,6 +3,7 @@
 
 #include "bass.h"
 #include <thread>
+#include <iostream>
 
 class GameAudio
 {
