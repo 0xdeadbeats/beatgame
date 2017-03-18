@@ -1,5 +1,5 @@
 CC := g++
-TARGET := libpolyplex.so
+TARGET := 0xdeadbeats
 SOURCEDIR := src/
 SOURCES := $(shell find $(SOURCEDIR) -name '*.cpp')
 OBJECTS := $(patsubst %.cpp, %.o, $(SOURCES))
