@@ -13,12 +13,15 @@ public:
 
 	void Play();
 	uint64_t GetTime();
+	double GetTimeS();
+	double GetTimeMS();
 	uint64_t GetLength();
 
 private:
 	void handlePlay();
 	char* _filename;
 	HSTREAM _hstream;
+	BASS_CHANNELINFO _info;
 };
 
 

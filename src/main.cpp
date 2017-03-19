@@ -14,7 +14,7 @@ int main()
     SDL_Init(SDL_INIT_EVERYTHING);
 
     //Create Game Window.
-    GameWindow* gm = new GameWindow("0xdeadbeats 0.1.imgay", 500, 500);
+    GameWindow* gm = new GameWindow("Beat Game", 500, 500);
 
     //Run the GameLoop.
     gm->GameLoop();

@@ -16,7 +16,9 @@ GameWindow::~GameWindow()
 
 void GameWindow::ClearColor()
 {
+    SDL_LockSurface(_surface);
     SDL_FillRect(_surface, NULL, SDL_MapRGB(_surface->format, 0, 0, 0));
+    SDL_UnlockSurface(_surface);
 }
 
 void GameWindow::Update()
@@ -39,13 +41,10 @@ void GameWindow::Draw()
 
 void GameWindow::GameLoop()
 {
-    char title[1024];
-    int n = 0;
     while(_running)
     {
         //Update game
         Update();
-
         //Lock window surface
         SDL_LockSurface(_surface);
 
