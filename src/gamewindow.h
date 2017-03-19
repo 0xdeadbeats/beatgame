@@ -3,6 +3,7 @@
 
 #include "SDL2/SDL.h"
 #include "input.h"
+#include "sound.h"
 #include <iostream>
 
 class GameWindow
@@ -15,6 +16,7 @@ public:
 	void GameLoop();
 	void Update();
 	void Draw();
+	void SetTitle(char* title);
 
 private:
 	SDL_Window* _window = nullptr;

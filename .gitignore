@@ -6,3 +6,6 @@ GRTAGS
 GSYMS
 GTAGS
 build/*
+*.mp3
+*.wav
+*.ogg

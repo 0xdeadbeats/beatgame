@@ -3,7 +3,13 @@
 GameAudio::GameAudio(char* title)
 {
 	_filename = title;
-	_hstream = BASS_StreamCreateFile(false, _filename, 0, 0, BASS_SAMPLE_FLOAT | BASS_STREAM_PRESCAN);
+	_hstream = BASS_StreamCreateFile(FALSE, _filename, 0, 0, BASS_STREAM_PRESCAN);
+
+    std::cout << "[Audio] BASS Initialzed audio with code: " << BASS_ErrorGetCode() << "." << std::endl;
+	if (_hstream == NULL)
+	{
+		std::cout << "Failed creating audio!" << std::endl;
+	}
 }
 
 GameAudio::~GameAudio()
@@ -11,18 +17,13 @@ GameAudio::~GameAudio()
 	BASS_StreamFree(_hstream);
 }
 
-void GameAudio::handlePlay()
-{
-	//Play the audio.
-	BASS_ChannelPlay(_hstream, false);
-}
-
 void GameAudio::Play()
 {
-	std::cout << "[Audio] play: " << _filename;
+	std::cout << "[Audio] play: " << _filename << std::endl;
 
-	//Starts a new thread to play the audio.
-	std::thread(handlePlay);
+	bool outcome = BASS_ChannelPlay(_hstream, false);
+
+	std::cout << "[Audio] Error " << BASS_ErrorGetCode() << "!" << std::endl;
 }
 
 uint64_t GameAudio::GetLength()

@@ -25,7 +25,7 @@ clean:
 	rm -r $(OBJECTS) $(BUILDDIR)$(TARGET)
 
 test:
-	./$(BUILDDIR)$(TARGET)
+	cd $(BUILDDIR); ./$(TARGET); cd ..
 
 prepare:
 	mkdir ../build
