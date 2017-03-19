@@ -14,7 +14,7 @@ public:
     void Draw();
 
 private:
-    std::vector<GameObject> objects;
+    std::vector<GameObject> _objects;
 };
 
 #endif

@@ -5,6 +5,7 @@
 #include "input.h"
 #include "sound.h"
 #include <iostream>
+#include "gameworld.h"
 
 class GameWindow
 {
@@ -19,6 +20,7 @@ public:
 	void SetTitle(char* title);
 
 private:
+	GameWorld* _world = nullptr;
 	SDL_Window* _window = nullptr;
 	SDL_Surface* _surface = nullptr;
 	bool _running = true;

@@ -4,14 +4,10 @@
 class Vector2D
 {
 public:
-    Vector2D(int X, int Y){
-        this->X = X;
-        this->Y = Y;
-    }
-
+    Vector2D(int x, int y);
+    ~Vector2D();
     int X;
     int Y;
-
 };
 
 #endif

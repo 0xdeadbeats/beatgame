@@ -16,5 +16,4 @@ private:
     Vector2D _pos;
 };
 
-
 #endif

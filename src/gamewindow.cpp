@@ -7,6 +7,8 @@ GameWindow::GameWindow(const char* title, int width, int height)
     
     //Get the surface from the window we've created.
     _surface = SDL_GetWindowSurface(_window);
+
+    //_world = new GameWorld();
 }
 
 GameWindow::~GameWindow()
