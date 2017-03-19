@@ -9,8 +9,8 @@ public:
     GameObject();
     ~GameObject();
 
-    void Update() = 0;
-    void Draw() = 0;
+    virtual void Update() = 0;
+    virtual void Draw() = 0;
 
 private:
     Vector2D _pos;
