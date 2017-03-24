@@ -43,10 +43,17 @@ void GameWindow::Draw()
 
 void GameWindow::GameLoop()
 {
+    SDL_Event ev;
     while(_running)
     {
+        //Handle user pressing exit button
+        SDL_PollEvent(&ev);
+        if (ev.type == SDL_QUIT)
+            _running = false;
+
         //Update game
         Update();
+
         //Lock window surface
         SDL_LockSurface(_surface);
 
