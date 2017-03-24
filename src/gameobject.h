@@ -13,7 +13,7 @@ public:
     virtual void Draw() = 0;
 
 private:
-    Vector2D _pos;
+    Vector2D* _pos = nullptr;
 };
 
 #endif

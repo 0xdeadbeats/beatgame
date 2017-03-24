@@ -18,5 +18,8 @@ int main()
 
     //Run the GameLoop.
     gm->GameLoop();
+
+    ///Make sure music streams, etc. are freed before quitting.
+    BASS_Free();
     return 0;
 }

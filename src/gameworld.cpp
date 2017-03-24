@@ -12,16 +12,16 @@ GameWorld::~GameWorld()
 
 void GameWorld::Update()
 {
-    for(int i = 0; i < objects.size(); i++)
+    for(int i = 0; i < _objects.size(); i++)
     {
-        objects[i].Update();
+        _objects[i].Update();
     }
 }
 
 void GameWorld::Draw()
 {
-    for(int i = 0; i < objects.size(); i++)
+    for(int i = 0; i < _objects.size(); i++)
     {
-        objects[i].Draw();
+        _objects[i].Draw();
     }
 }
